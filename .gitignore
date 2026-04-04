@@ -9,7 +9,5 @@ assets/css/
 node_modules/
 
 # AI・ローカル設定
-# テンプレート自体はこれらをGit管理に含めるためコメントアウト
-# 案件にコピーした際はコメントを外して除外すること
-# .ai/
-# .github/
+.ai/
+.github/
