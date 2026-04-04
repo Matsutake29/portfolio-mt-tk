@@ -5,12 +5,17 @@
 // ============================================================
 
 // ------------------------------------------------------------
-// Responsive (min-width / モバイルファースト)
-// 使い方: @include mq(md) { ... }
+// Responsive (max-width / デスクトップファースト)
+// 使い方: @include mq-lg { ... } / @include mq-sm { ... }
 // ------------------------------------------------------------
-@mixin mq($breakpoint) {
-  $bp: map-get(v.$breakpoints, $breakpoint);
-  @media screen and (min-width: #{$bp}) {
+@mixin mq-lg {
+  @media screen and (max-width: #{v.$bp-lg}) {
+    @content;
+  }
+}
+
+@mixin mq-sm {
+  @media screen and (max-width: #{v.$bp-sm}) {
     @content;
   }
 }
