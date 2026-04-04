@@ -9,7 +9,7 @@
 .u-pc-only {
   display: none;
 
-  @include m.mq(md) {
+  @include m.mq-sm {
     display: block;
   }
 }
@@ -17,7 +17,7 @@
 .u-sp-only {
   display: block;
 
-  @include m.mq(md) {
+  @include m.mq-sm {
     display: none;
   }
 }

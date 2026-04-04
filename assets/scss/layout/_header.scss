@@ -15,7 +15,7 @@
   background-color: v.$color-white;
   // TODO: 案件に応じてスタイルを調整
 
-  @include m.mq(md) {
+  @include m.mq-sm {
     height: v.$header-height-pc;
   }
 
@@ -42,7 +42,7 @@
       width: auto;
       height: 36px;
 
-      @include m.mq(md) {
+      @include m.mq-sm {
         height: 44px;
       }
     }
@@ -51,7 +51,7 @@
   &__nav {
     display: none;
 
-    @include m.mq(lg) {
+    @include m.mq-lg {
       display: block;
     }
 
@@ -80,7 +80,7 @@
   &__cta {
     display: none;
 
-    @include m.mq(lg) {
+    @include m.mq-lg {
       display: block;
     }
   }
@@ -95,7 +95,7 @@
     padding: 8px;
     cursor: pointer;
 
-    @include m.mq(lg) {
+    @include m.mq-lg {
       display: none;
     }
 
@@ -137,7 +137,7 @@
   transition: transform 0.3s ease;
   z-index: 99;
 
-  @include m.mq(lg) {
+  @include m.mq-lg {
     display: none;
   }
 

@@ -13,11 +13,11 @@
   grid-template-columns: 1fr;
   gap: 24px;
 
-  @include m.mq(md) {
+  @include m.mq-sm {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include m.mq(lg) {
+  @include m.mq-lg {
     grid-template-columns: repeat(3, 1fr);
   }
 

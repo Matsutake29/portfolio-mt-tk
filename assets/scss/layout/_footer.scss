@@ -15,7 +15,7 @@
     margin-inline: auto;
     padding: 60px v.$container-padding 32px;
 
-    @include m.mq(md) {
+    @include m.mq-sm {
       padding-top: 80px;
     }
   }

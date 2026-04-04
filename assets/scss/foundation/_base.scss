@@ -13,7 +13,7 @@ html {
   // CSS変数でヘッダー高さを管理（JSでの制御にも対応）
   --header-height: #{v.$header-height-sp};
 
-  @media screen and (min-width: map-get(v.$breakpoints, "md")) {
+  @media screen and (min-width: #{v.$bp-lg}) {
     --header-height: #{v.$header-height-pc};
   }
 }
