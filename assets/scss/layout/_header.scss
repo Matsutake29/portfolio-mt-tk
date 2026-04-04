@@ -1,0 +1,165 @@
+@use "../foundation/variables" as v;
+@use "../foundation/mixins" as m;
+
+// ============================================================
+// Layout: Header
+// ============================================================
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: v.$header-height-sp;
+  z-index: 100;
+  background-color: v.$color-white;
+  // TODO: 案件に応じてスタイルを調整
+
+  @include m.mq(md) {
+    height: v.$header-height-pc;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding-inline: v.$container-padding;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+
+    &-link {
+      display: block;
+
+      @include m.hover {
+        opacity: 0.8;
+      }
+    }
+
+    img {
+      width: auto;
+      height: 36px;
+
+      @include m.mq(md) {
+        height: 44px;
+      }
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include m.mq(lg) {
+      display: block;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    &-link {
+      font-size: 0.9375rem;
+      font-family: v.$font-en;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+
+      &.is-active {
+        color: v.$color-accent;
+      }
+
+      @include m.hover {
+        color: v.$color-accent;
+      }
+    }
+  }
+
+  &__cta {
+    display: none;
+
+    @include m.mq(lg) {
+      display: block;
+    }
+  }
+
+  &__hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    cursor: pointer;
+
+    @include m.mq(lg) {
+      display: none;
+    }
+
+    &-bar {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: v.$color-text;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    &[aria-expanded="true"] {
+      .l-header__hamburger-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      .l-header__hamburger-bar:nth-child(2) {
+        opacity: 0;
+      }
+      .l-header__hamburger-bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+// ============================================================
+// Layout: SP Navigation
+// ============================================================
+
+.l-sp-nav {
+  position: fixed;
+  top: v.$header-height-sp;
+  left: 0;
+  width: 100%;
+  height: calc(100dvh - #{v.$header-height-sp});
+  background-color: v.$color-white;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 99;
+
+  @include m.mq(lg) {
+    display: none;
+  }
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  &__list {
+    padding: 24px v.$container-padding;
+  }
+
+  &__item {
+    border-bottom: 1px solid v.$color-border;
+  }
+
+  &__link {
+    display: block;
+    padding: 16px 0;
+    font-size: 1rem;
+
+    &.is-active {
+      color: v.$color-accent;
+    }
+  }
+}

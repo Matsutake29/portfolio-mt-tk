@@ -1,0 +1,37 @@
+@use "../../foundation/variables" as v;
+@use "../../foundation/mixins" as m;
+
+// ============================================================
+// Utility
+// ============================================================
+
+// 表示・非表示
+.u-pc-only {
+  display: none;
+
+  @include m.mq(md) {
+    display: block;
+  }
+}
+
+.u-sp-only {
+  display: block;
+
+  @include m.mq(md) {
+    display: none;
+  }
+}
+
+// テキスト
+.u-text-center { text-align: center; }
+.u-text-right  { text-align: right; }
+
+// 視覚的に非表示（スクリーンリーダーには読まれる）
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}

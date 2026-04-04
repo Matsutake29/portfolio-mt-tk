@@ -1,0 +1,118 @@
+@use "../../foundation/variables" as v;
+@use "../../foundation/mixins" as m;
+
+// ============================================================
+// Project: Single（詳細ページ共通）
+// ============================================================
+
+.p-single {
+  max-width: 800px;
+  margin-inline: auto;
+  margin-top: 40px;
+
+  &__header {
+    margin-bottom: 32px;
+  }
+
+  &__date {
+    display: block;
+    font-size: 0.75rem;
+    color: v.$color-text-light;
+    font-family: v.$font-en;
+    margin-bottom: 8px;
+  }
+
+  &__cat {
+    display: inline-block;
+    font-size: 0.6875rem;
+    padding: 2px 8px;
+    border: 1px solid v.$color-border;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  &__thumb {
+    margin-bottom: 40px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // WordPressエディタのコンテンツ
+  &__body {
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-left: 12px;
+      border-left: 4px solid v.$color-accent;
+    }
+
+    h3 {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin-bottom: 24px;
+      line-height: v.$line-height-base;
+    }
+
+    img {
+      margin-block: 24px;
+    }
+
+    a {
+      color: v.$color-accent;
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      margin-bottom: 24px;
+      padding-left: 1.5em;
+
+      li {
+        margin-bottom: 8px;
+      }
+    }
+
+    ul li { list-style-type: disc; }
+    ol li { list-style-type: decimal; }
+  }
+
+  // 前後の投稿ナビゲーション
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid v.$color-border;
+    font-size: 0.875rem;
+
+    &-prev,
+    &-next {
+      max-width: 48%;
+      color: v.$color-accent;
+
+      @include m.hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-next { margin-left: auto; }
+  }
+}

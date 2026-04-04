@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# コンパイル済みCSS（SCSSから生成するため除外）
+assets/css/
+
+# node
+node_modules/
+
+# AI・ローカル設定
+# テンプレート自体はこれらをGit管理に含めるためコメントアウト
+# 案件にコピーした際はコメントを外して除外すること
+# .ai/
+# .github/
