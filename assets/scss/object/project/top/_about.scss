@@ -1,0 +1,155 @@
+@use "../../../foundation/variables" as v;
+@use "../../../foundation/mixins" as m;
+
+// ============================================================
+// Project: Top - About（自己紹介）
+// ============================================================
+
+.p-top-about {
+  padding: 120px 0;
+  background-color: v.$color-bg-gray;
+
+  @include m.mq-sm {
+    padding: 80px 0;
+  }
+}
+
+.p-top-about__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+
+  @include m.mq-lg {
+    gap: 56px;
+  }
+
+  @include m.mq-sm {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+// 画像カラム
+.p-top-about__image-col {
+  @include m.mq-sm {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.p-top-about__image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+
+  @include m.mq-sm {
+    max-width: 260px;
+  }
+}
+
+.p-top-about__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+  background-color: v.$color-bg;
+}
+
+// コンテンツカラム
+.p-top-about__header {
+  margin-bottom: 24px;
+}
+
+.p-top-about__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: v.$font-en;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: v.$color-accent;
+  margin-bottom: 12px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 1px;
+    background-color: v.$color-accent;
+    flex-shrink: 0;
+  }
+}
+
+.p-top-about__heading {
+  font-family: v.$font-display;
+  font-style: italic;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: v.$color-primary;
+  line-height: 1.2;
+}
+
+.p-top-about__name-en {
+  font-family: v.$font-en;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: v.$color-text-light;
+  margin-bottom: 4px;
+}
+
+.p-top-about__name-ja {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: v.$color-primary;
+  margin-bottom: 32px;
+}
+
+.p-top-about__text {
+  font-size: 0.9375rem;
+  line-height: 2;
+  color: v.$color-text;
+  margin-bottom: 36px;
+
+  p + p {
+    margin-top: 1em;
+  }
+}
+
+.p-top-about__info {
+  margin-bottom: 40px;
+  border-top: 1px solid v.$color-border;
+}
+
+.p-top-about__info-row {
+  display: flex;
+  gap: 24px;
+  padding: 14px 0;
+  border-bottom: 1px solid v.$color-border;
+}
+
+.p-top-about__info-label {
+  font-family: v.$font-en;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: v.$color-text-light;
+  flex-shrink: 0;
+  width: 80px;
+  padding-top: 2px;
+}
+
+.p-top-about__info-value {
+  font-size: 0.9375rem;
+  color: v.$color-text;
+  line-height: 1.7;
+}

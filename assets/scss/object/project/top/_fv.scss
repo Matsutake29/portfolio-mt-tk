@@ -1,0 +1,324 @@
+@use "../../../foundation/variables" as v;
+@use "../../../foundation/mixins" as m;
+
+// ============================================================
+// Project: Top - FV（ファーストビュー）
+// ============================================================
+
+.p-top-fv {
+  min-height: calc(100svh - v.$header-height-pc);
+  display: flex;
+  align-items: center;
+  background-color: v.$color-bg;
+  position: relative;
+  overflow: hidden;
+
+  @include m.mq-lg {
+    min-height: calc(100svh - v.$header-height-sp);
+  }
+
+  // 左端のアクセントライン
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 3px;
+    height: 60%;
+    background: linear-gradient(to bottom, transparent, v.$color-accent, transparent);
+    pointer-events: none;
+  }
+}
+
+.p-top-fv__inner {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include m.mq-lg {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+// 2カラムレイアウト
+.p-top-fv__body {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  gap: 60px;
+  align-items: center;
+
+  @include m.mq-lg {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+// ---- テキストカラム ----
+
+.p-top-fv__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: v.$font-en;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: v.$color-primary;
+  margin-bottom: 28px;
+  white-space: nowrap;
+
+  @include m.mq-sm {
+    font-size: 0.625rem;
+    letter-spacing: 0.1em;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 1px;
+    background-color: v.$color-primary;
+    flex-shrink: 0;
+  }
+}
+
+.p-top-fv__heading {
+  font-family: v.$font-display;
+  font-style: italic;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  color: v.$color-primary;
+  margin-bottom: 32px;
+
+  @include m.mq-lg {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+  }
+
+  @include m.mq-sm {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+}
+
+.p-top-fv__name {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 44px;
+
+  @include m.mq-sm {
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 36px;
+  }
+}
+
+.p-top-fv__name-ja {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: v.$color-text;
+}
+
+.p-top-fv__name-en {
+  font-family: v.$font-en;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: v.$color-text-light;
+}
+
+.p-top-fv__btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  .c-btn {
+    width: 260px;
+    justify-content: center;
+  }
+
+  @include m.mq-sm {
+    .c-btn {
+      width: 220px;
+    }
+  }
+}
+
+// ---- ビジュアルカラム ----
+
+.p-top-fv__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// ターミナルビジュアル
+.p-top-fv__terminal {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(0, 255, 65, 0.15),
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(0, 255, 65, 0.05);
+}
+
+.p-top-fv__terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+.p-top-fv__terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.p-top-fv__terminal-dot--red    { background-color: #ff5f57; }
+.p-top-fv__terminal-dot--yellow { background-color: #febc2e; }
+.p-top-fv__terminal-dot--green  { background-color: #28c840; }
+
+.p-top-fv__terminal-title {
+  font-family: "Menlo", "Courier New", monospace;
+  font-size: 0.6875rem;
+  color: #666;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.02em;
+}
+
+.p-top-fv__terminal-body {
+  height: 420px;
+
+  @include m.mq-lg {
+    height: 260px;
+  }
+
+  @include m.mq-sm {
+    height: 200px;
+  }
+
+  background-color: #0d1117;
+  overflow: hidden;
+  position: relative;
+
+  // 上下フェード
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 0;
+    background: linear-gradient(to bottom, #0d1117, transparent);
+  }
+
+  &::after {
+    bottom: 0;
+    background: linear-gradient(to top, #0d1117, transparent);
+  }
+}
+
+.p-top-fv__terminal-scroll {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  animation: terminalScroll 14s linear infinite;
+}
+
+// コードライン
+.p-top-fv__cl {
+  display: block;
+  font-family: "Menlo", "Courier New", monospace;
+  font-size: 0.8125rem;
+  line-height: 1.85;
+  white-space: nowrap;
+
+  @include m.mq-sm {
+    font-size: 0.6875rem;
+    line-height: 1.7;
+  }
+}
+
+.p-top-fv__cl--comment { color: #3fb950; opacity: 0.5; }
+.p-top-fv__cl--sel     { color: #79c0ff; }
+.p-top-fv__cl--prop    { color: #a5d6ff; }
+.p-top-fv__cl--brace   { color: #79c0ff; }
+.p-top-fv__cl--php     { color: #d2a8ff; }
+.p-top-fv__cl--tag     { color: #7ee787; }
+.p-top-fv__cl--str     { color: #a5d6ff; }
+.p-top-fv__cl--js      { color: #ffa657; }
+.p-top-fv__cl--blank   { line-height: 1; }
+
+// ---- スクロールインジケーター ----
+
+.p-top-fv__scroll {
+  position: absolute;
+  bottom: 36px;
+  left: v.$container-padding;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 1;
+
+  @include m.mq-sm {
+    display: none;
+  }
+}
+
+.p-top-fv__scroll-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, v.$color-primary, transparent);
+  animation: scrollLineAnim 2s ease-in-out infinite;
+}
+
+.p-top-fv__scroll-text {
+  font-family: v.$font-en;
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: v.$color-primary;
+  writing-mode: vertical-rl;
+  opacity: 0.5;
+}
+
+@keyframes terminalScroll {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes scrollLineAnim {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+  }
+  30% { opacity: 1; }
+  70% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+}

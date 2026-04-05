@@ -9,57 +9,72 @@
   background-color: v.$color-primary;
   color: v.$color-white;
   // TODO: 案件に応じてスタイルを調整
+}
 
-  &__inner {
-    max-width: v.$container-max-width;
-    margin-inline: auto;
-    padding: 60px v.$container-padding 32px;
+.l-footer__inner {
+  max-width: v.$container-max-width;
+  margin-inline: auto;
+  padding: 60px v.$container-padding 32px;
 
-    @include m.mq-sm {
-      padding-top: 80px;
-    }
+  @include m.mq-sm {
+    padding-top: 80px;
   }
+}
 
-  &__logo {
-    margin-bottom: 40px;
+.l-footer__logo {
+  margin-bottom: 40px;
+}
 
-    &-link {
-      display: inline-block;
+.l-footer__logo-link {
+  display: inline-block;
 
-      @include m.hover {
-        opacity: 0.8;
-      }
-    }
-
-    img {
-      width: auto;
-      height: 40px;
-    }
+  @include m.hover {
+    opacity: 0.8;
   }
+}
 
-  &__nav {
-    margin-bottom: 48px;
+.l-footer__logo img {
+  width: auto;
+  height: 40px;
+}
 
-    &-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px 32px;
-    }
+.l-footer__logo svg {
+  display: block;
+  height: 28px;
+  width: auto;
+  overflow: visible;
+}
 
-    &-link {
-      font-size: 0.875rem;
-      transition: opacity 0.2s;
+.l-footer__nav {
+  margin-bottom: 40px;
+}
 
-      @include m.hover {
-        opacity: 0.7;
-      }
-    }
+.l-footer__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  @include m.mq-sm {
+    flex-direction: column;
+    gap: 16px;
   }
+}
 
-  &__copyright {
-    font-size: 0.75rem;
-    color: rgba(v.$color-white, 0.6);
-    border-top: 1px solid rgba(v.$color-white, 0.2);
-    padding-top: 24px;
+.l-footer__nav-link {
+  font-size: 0.8125rem;
+  font-family: v.$font-en;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: rgba(v.$color-white, 0.7);
+  transition: color 0.2s;
+
+  @include m.hover {
+    color: v.$color-white;
   }
+}
+
+.l-footer__copyright {
+  font-size: 0.75rem;
+  color: rgba(v.$color-white, 0.4);
+  letter-spacing: 0.05em;
 }

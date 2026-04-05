@@ -7,7 +7,6 @@ assets/css/
 
 # node
 node_modules/
-package.json
 package-lock.json
 
 # AI・ローカル設定

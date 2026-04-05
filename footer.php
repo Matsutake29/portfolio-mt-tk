@@ -2,29 +2,21 @@
     <div class="l-footer__inner">
 
       <div class="l-footer__logo">
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="l-footer__logo-link">
-          <!-- TODO: フッターロゴのパスとalt・サイズを変更 -->
-          <img
-            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo-white.svg"
-            alt="<?php echo esc_attr(get_bloginfo('name')); ?>"
-            width="200"
-            height="40"
-            loading="lazy"
-          >
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="l-footer__logo-link" aria-label="MATSUO DW - ホームへ">
+          <?php include get_template_directory() . '/assets/img/common/logo-white.svg'; ?>
         </a>
       </div>
 
-      <!-- TODO: フッターナビゲーションを案件ごとに変更 -->
       <nav class="l-footer__nav" aria-label="フッターナビゲーション">
         <ul class="l-footer__nav-list">
-          <li class="l-footer__nav-item">
-            <a href="<?php echo esc_url(home_url('company/')); ?>" class="l-footer__nav-link">Company</a>
-          </li>
           <li class="l-footer__nav-item">
             <a href="<?php echo esc_url(home_url('works/')); ?>" class="l-footer__nav-link">Works</a>
           </li>
           <li class="l-footer__nav-item">
-            <a href="<?php echo esc_url(home_url('news/')); ?>" class="l-footer__nav-link">News</a>
+            <a href="<?php echo esc_url(home_url('skills/')); ?>" class="l-footer__nav-link">Skills</a>
+          </li>
+          <li class="l-footer__nav-item">
+            <a href="<?php echo esc_url(home_url('profile/')); ?>" class="l-footer__nav-link">Profile</a>
           </li>
           <li class="l-footer__nav-item">
             <a href="<?php echo esc_url(home_url('contact/')); ?>" class="l-footer__nav-link">Contact</a>

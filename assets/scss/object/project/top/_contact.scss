@@ -1,0 +1,88 @@
+@use "../../../foundation/variables" as v;
+@use "../../../foundation/mixins" as m;
+
+// ============================================================
+// Project: Top - Contact CTA
+// ============================================================
+
+.p-top-contact {
+  padding: 120px 0;
+  background-color: v.$color-bg-gray;
+  border-top: 1px solid v.$color-border;
+  position: relative;
+  overflow: hidden;
+
+  // 右上の大きなドット装飾
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(v.$color-primary, 0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @include m.mq-sm {
+    padding: 80px 0;
+  }
+}
+
+.p-top-contact__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.p-top-contact__label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: v.$font-en;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: v.$color-accent;
+  margin-bottom: 20px;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 1px;
+    background-color: v.$color-accent;
+  }
+}
+
+.p-top-contact__heading {
+  font-family: v.$font-display;
+  font-style: italic;
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: v.$color-primary;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.p-top-contact__text {
+  font-size: 0.9375rem;
+  line-height: 2;
+  color: v.$color-text-light;
+  margin-bottom: 48px;
+
+  @include m.mq-sm {
+    margin-bottom: 36px;
+  }
+}
+
+// c-btnに上書きスタイルなし（c-btn--lgをそのまま使用）
+.p-top-contact__btn {
+  // c-btn--lgで表示
+}

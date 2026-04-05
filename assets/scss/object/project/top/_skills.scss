@@ -1,0 +1,113 @@
+@use "../../../foundation/variables" as v;
+@use "../../../foundation/mixins" as m;
+
+// ============================================================
+// Project: Top - Skills（使用技術）
+// ============================================================
+
+.p-top-skills {
+  padding: 120px 0;
+  background-color: v.$color-bg;
+
+  @include m.mq-sm {
+    padding: 80px 0;
+  }
+}
+
+.p-top-skills__header {
+  margin-bottom: 64px;
+
+  @include m.mq-sm {
+    margin-bottom: 48px;
+  }
+}
+
+.p-top-skills__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: v.$font-en;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: v.$color-accent;
+  margin-bottom: 12px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 1px;
+    background-color: v.$color-accent;
+    flex-shrink: 0;
+  }
+}
+
+.p-top-skills__heading {
+  font-family: v.$font-display;
+  font-style: italic;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: v.$color-primary;
+  line-height: 1.2;
+}
+
+.p-top-skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 60px;
+
+  @include m.mq-lg {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 48px;
+  }
+
+  @include m.mq-sm {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+.p-top-skills__category {
+  // カテゴリブロック
+}
+
+.p-top-skills__category-title {
+  font-family: v.$font-en;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: v.$color-accent;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid v.$color-border;
+}
+
+.p-top-skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.p-top-skills__tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: v.$font-en;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: v.$color-primary;
+  background-color: v.$color-bg-gray;
+  border: 1px solid transparent;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+// レベル表示（任意）
+.p-top-skills__tag--primary {
+  background-color: rgba(v.$color-primary, 0.07);
+  border-color: rgba(v.$color-primary, 0.15);
+}

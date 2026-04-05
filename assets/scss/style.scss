@@ -30,9 +30,10 @@
 // ------------------------------------------------------------
 // ページごとにフォルダを作成し、_index.scssで@forwardまとめ
 // 新ページ追加時はここに1行追加する
-// @use "object/project/top" as *;
-// @use "object/project/website" as *;
-// @use "object/project/support" as *;
+@use "object/project/top" as *;
+// @use "object/project/works" as *;
+// @use "object/project/profile" as *;
+// @use "object/project/skills" as *;
 // @use "object/project/contact" as *;
 
 // ------------------------------------------------------------

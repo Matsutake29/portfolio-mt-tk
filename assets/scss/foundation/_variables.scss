@@ -8,11 +8,11 @@
 // ------------------------------------------------------------
 $color-primary:    #04384C;
 $color-primary-dark: #032A39;
-$color-accent:     #4A90D9;
+$color-accent:     #B07850;
 $color-text:       #333333;
 $color-text-light: #888888;
-$color-bg:         #ffffff;
-$color-bg-gray:    #F5F5F5;
+$color-bg:         #F9F8F5;
+$color-bg-gray:    #F0EFE9;
 $color-border:     #dddddd;
 $color-white:      #ffffff;
 $color-black:      #000000;
@@ -21,8 +21,9 @@ $color-black:      #000000;
 // Typography
 // TODO: 案件ごとに変更
 // ------------------------------------------------------------
-$font-primary: "Noto Sans JP", sans-serif;
-$font-en:      "Inter", sans-serif;
+$font-primary:  "Shippori Mincho B1", serif;
+$font-en:       "Jost", sans-serif;
+$font-display:  "Cormorant Garamond", serif;
 
 $font-size-base: 16px;
 $line-height-base: 1.8;

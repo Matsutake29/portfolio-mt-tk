@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-mt-tk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css": "sass assets/scss/style.scss assets/css/style.min.css --style=compressed",
+    "watch": "sass --watch assets/scss/style.scss assets/css/style.min.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "puppeteer": "^24.40.0"
+  },
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}

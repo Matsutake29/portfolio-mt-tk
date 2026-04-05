@@ -21,10 +21,10 @@ add_action('after_setup_theme', 'theme_setup');
 // Enqueue Scripts & Styles
 // ============================================================
 function theme_enqueue() {
-  // Google Fonts（Noto Sans JP + Inter）
+  // Google Fonts（Cormorant Garamond + Jost + Shippori Mincho B1）
   wp_enqueue_style(
     'google-fonts',
-    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap',
+    'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Jost:wght@400;500;600&family=Shippori+Mincho+B1:wght@400;500;700&display=swap',
     [],
     null
   );

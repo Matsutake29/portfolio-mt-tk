@@ -18,28 +18,29 @@
   cursor: pointer;
 
   // primary（デフォルト）
-  background-color: v.$color-accent;
+  background-color: v.$color-primary;
   color: v.$color-white;
 
   @include m.hover {
-    opacity: 0.8;
+    background-color: v.$color-primary-dark;
   }
 
-  // secondary
-  &--secondary {
-    background-color: transparent;
-    color: v.$color-accent;
-    border: 1px solid v.$color-accent;
+}
 
-    @include m.hover {
-      background-color: v.$color-accent;
-      color: v.$color-white;
-    }
-  }
+// secondary
+.c-btn--secondary {
+  background-color: transparent;
+  color: v.$color-primary;
+  border: 1px solid v.$color-primary;
 
-  // large
-  &--lg {
-    padding: 16px 48px;
-    font-size: 1rem;
+  @include m.hover {
+    background-color: v.$color-primary;
+    color: v.$color-white;
   }
+}
+
+// large
+.c-btn--lg {
+  padding: 16px 48px;
+  font-size: 1rem;
 }

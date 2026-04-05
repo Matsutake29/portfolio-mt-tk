@@ -1,0 +1,173 @@
+@use "../../../foundation/variables" as v;
+@use "../../../foundation/mixins" as m;
+
+// ============================================================
+// Project: Top - Works（制作実績）
+// ============================================================
+
+.p-top-works {
+  padding: 120px 0;
+  background-color: v.$color-bg-gray;
+
+  @include m.mq-sm {
+    padding: 80px 0;
+  }
+}
+
+.p-top-works__header {
+  margin-bottom: 56px;
+
+  @include m.mq-sm {
+    margin-bottom: 40px;
+  }
+}
+
+.p-top-works__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: v.$font-en;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: v.$color-accent;
+  margin-bottom: 12px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 1px;
+    background-color: v.$color-accent;
+    flex-shrink: 0;
+  }
+}
+
+.p-top-works__heading {
+  font-family: v.$font-display;
+  font-style: italic;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: v.$color-primary;
+  line-height: 1.2;
+}
+
+.p-top-works__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 56px;
+
+  @include m.mq-lg {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  @include m.mq-sm {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+.p-top-works__item {
+  // リストスタイルリセット
+}
+
+.p-top-works__link {
+  display: block;
+  text-decoration: none;
+
+  @include m.hover {
+    .p-top-works__overlay {
+      opacity: 1;
+    }
+    .p-top-works__img {
+      transform: scale(1.04);
+    }
+  }
+}
+
+.p-top-works__thumb {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background-color: v.$color-bg;
+  margin-bottom: 16px;
+}
+
+.p-top-works__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.p-top-works__img-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: v.$color-border;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 4px,
+    rgba(v.$color-primary, 0.04) 4px,
+    rgba(v.$color-primary, 0.04) 8px
+  );
+}
+
+.p-top-works__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(v.$color-primary, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.p-top-works__overlay-text {
+  font-family: v.$font-display;
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: v.$color-white;
+}
+
+.p-top-works__meta {
+  padding: 0 4px;
+}
+
+.p-top-works__title {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: v.$color-text;
+  margin-bottom: 6px;
+  transition: color 0.2s;
+
+  .p-top-works__link:hover & {
+    color: v.$color-primary;
+  }
+}
+
+.p-top-works__excerpt {
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: v.$color-text-light;
+}
+
+.p-top-works__footer {
+  text-align: center;
+}
+
+.p-top-works__empty {
+  text-align: center;
+  color: v.$color-text-light;
+  font-size: 0.9375rem;
+  padding: 60px 0;
+}
