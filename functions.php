@@ -21,11 +21,19 @@ add_action('after_setup_theme', 'theme_setup');
 // Enqueue Scripts & Styles
 // ============================================================
 function theme_enqueue() {
+  // Google Fonts（Noto Sans JP + Inter）
+  wp_enqueue_style(
+    'google-fonts',
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap',
+    [],
+    null
+  );
+
   // CSS
   wp_enqueue_style(
     'theme-main',
     get_template_directory_uri() . '/assets/css/style.min.css',
-    [],
+    ['google-fonts'],
     filemtime(get_template_directory() . '/assets/css/style.min.css')
   );
 
