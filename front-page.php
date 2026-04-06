@@ -251,9 +251,8 @@
           <ul class="p-top-skills__list">
             <li class="p-top-skills__tag">SEO</li>
             <li class="p-top-skills__tag">GA4</li>
-            <li class="p-top-skills__tag">サーバー設定・DNS</li>
+            <li class="p-top-skills__tag">サーバー設定</li>
             <li class="p-top-skills__tag">工程・進行管理</li>
-            <li class="p-top-skills__tag">AI活用</li>
           </ul>
         </div>
 

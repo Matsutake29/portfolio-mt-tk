@@ -1,0 +1,341 @@
+@use "../../../foundation/variables" as v;
+@use "../../../foundation/mixins" as m;
+
+// ============================================================
+// Project: Works - Single（詳細ページ）
+// ============================================================
+
+.p-works-single {
+  padding: 64px 0 120px;
+
+  @include m.mq-sm {
+    padding: 48px 0 80px;
+  }
+}
+
+// ヘッダー
+.p-works-single__header {
+  margin-bottom: 40px;
+}
+
+.p-works-single__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: v.$font-en;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: v.$color-accent;
+  margin-bottom: 16px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 1px;
+    background-color: v.$color-accent;
+    flex-shrink: 0;
+  }
+}
+
+.p-works-single__title {
+  font-family: v.$font-display;
+  font-style: italic;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: v.$color-primary;
+  line-height: 1.3;
+}
+
+// メイン画像
+.p-works-single__thumb {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  margin-bottom: 56px;
+  background-color: v.$color-bg-gray;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include m.mq-sm {
+    margin-bottom: 40px;
+  }
+}
+
+// コンテンツレイアウト（本文 + サイドバー）
+.p-works-single__layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 64px;
+  align-items: start;
+
+  @include m.mq-lg {
+    grid-template-columns: 1fr 240px;
+    gap: 48px;
+  }
+
+  @include m.mq-sm {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+// 本文
+.p-works-single__body {
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-left: 12px;
+    border-left: 3px solid v.$color-accent;
+    color: v.$color-primary;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    color: v.$color-primary;
+  }
+
+  p {
+    margin-bottom: 24px;
+    line-height: 2;
+    font-size: 0.9375rem;
+    color: v.$color-text;
+  }
+
+  img {
+    margin-block: 24px;
+    width: 100%;
+    height: auto;
+  }
+
+  a {
+    color: v.$color-accent;
+    text-decoration: underline;
+  }
+
+  ul, ol {
+    margin-bottom: 24px;
+    padding-left: 1.5em;
+    font-size: 0.9375rem;
+    line-height: 1.8;
+
+    li {
+      margin-bottom: 8px;
+    }
+  }
+
+  ul li { list-style-type: disc; }
+  ol li { list-style-type: decimal; }
+}
+
+// サイドバー（プロジェクト情報）
+.p-works-single__sidebar {
+  // sticky で追従
+  @include m.mq-sm {
+    order: -1; // SP: 本文より先に表示
+  }
+}
+
+.p-works-single__info {
+  border-top: 1px solid v.$color-border;
+  margin-bottom: 32px;
+}
+
+.p-works-single__info-row {
+  padding: 16px 0;
+  border-bottom: 1px solid v.$color-border;
+}
+
+.p-works-single__info-label {
+  font-family: v.$font-en;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: v.$color-accent;
+  margin-bottom: 6px;
+}
+
+.p-works-single__info-value {
+  font-size: 0.875rem;
+  color: v.$color-text;
+  line-height: 1.7;
+}
+
+// サイトURLリンク
+.p-works-single__url {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: v.$font-en;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: v.$color-primary;
+  border: 1px solid v.$color-primary;
+  padding: 10px 20px;
+  width: 100%;
+  justify-content: center;
+  transition: background-color 0.2s, color 0.2s;
+
+  @include m.hover {
+    background-color: v.$color-primary;
+    color: v.$color-white;
+  }
+
+  &::after {
+    content: "↗";
+    font-size: 0.875rem;
+  }
+}
+
+// 前後ナビ
+.p-works-single__nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid v.$color-border;
+
+  @include m.mq-sm {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 56px;
+  }
+}
+
+.p-works-single__nav-prev,
+.p-works-single__nav-next {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  padding: 20px 40px;
+  border: 1px solid v.$color-border;
+  border-bottom: 2px solid v.$color-accent;
+  transition: border-color 0.25s, background-color 0.25s, border-bottom-color 0.25s;
+  min-width: 180px;
+
+  @include m.hover {
+    border-color: v.$color-primary;
+    border-bottom-color: v.$color-primary;
+    background-color: rgba(v.$color-primary, 0.04);
+  }
+
+  @include m.mq-sm {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.p-works-single__nav-dir {
+  font-family: v.$font-display;
+  font-style: italic;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: v.$color-accent;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.p-works-single__nav-title {
+  font-size: 0.875rem;
+  color: v.$color-text;
+  line-height: 1.6;
+}
+
+// 一覧に戻るリンク
+.p-works-single__back {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+// スキルタグ
+.p-works-single__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0;
+  list-style: none;
+}
+
+.p-works-single__skill {
+  font-family: v.$font-en;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: v.$color-accent;
+  padding: 2px 8px;
+  border: 1px solid rgba(v.$color-accent, 0.4);
+}
+
+// 詳細セクション（the_content エリア）
+.p-works-single__detail {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid v.$color-border;
+}
+
+.p-works-single__detail-heading {
+  font-family: v.$font-en;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: v.$color-text-light;
+  margin-bottom: 24px;
+}
+
+// GitHubリンク
+.p-works-single__url--github {
+  margin-top: 8px;
+
+  &::after {
+    content: "↗";
+    font-size: 0.875rem;
+  }
+}
+
+// 制作ログセクション
+.p-works-single__log {
+  // 本文エリアの先頭要素なのでtop余白なし
+}
+
+.p-works-single__log-section {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.p-works-single__log-heading {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: v.$color-accent;
+  padding-left: 12px;
+  border-left: 2px solid v.$color-accent;
+  margin-bottom: 16px;
+}
+
+.p-works-single__log-text {
+  font-size: 0.9375rem;
+  line-height: 1.9;
+  color: v.$color-text;
+}

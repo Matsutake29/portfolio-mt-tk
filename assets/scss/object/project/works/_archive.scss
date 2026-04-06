@@ -1,0 +1,220 @@
+@use "../../../foundation/variables" as v;
+@use "../../../foundation/mixins" as m;
+
+// ============================================================
+// Project: Works - Archive（一覧ページ）
+// ============================================================
+
+.p-works {
+  padding: 80px 0 120px;
+
+  @include m.mq-sm {
+    padding: 56px 0 80px;
+  }
+}
+
+// ページヘッダー
+.p-works__header {
+  margin-bottom: 64px;
+
+  @include m.mq-sm {
+    margin-bottom: 48px;
+  }
+}
+
+.p-works__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: v.$font-en;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: v.$color-accent;
+  margin-bottom: 12px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 1px;
+    background-color: v.$color-accent;
+    flex-shrink: 0;
+  }
+}
+
+.p-works__heading {
+  font-family: v.$font-display;
+  font-style: italic;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: v.$color-primary;
+  line-height: 1.2;
+}
+
+// グリッド
+.p-works__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 32px;
+  margin-bottom: 64px;
+
+  @include m.mq-lg {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 24px;
+  }
+
+  @include m.mq-sm {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+}
+
+// カード
+.p-works__item {
+  // リストスタイルリセット
+}
+
+.p-works__link {
+  display: block;
+  text-decoration: none;
+
+  @include m.hover {
+    .p-works__overlay {
+      opacity: 1;
+    }
+    .p-works__img {
+      transform: scale(1.04);
+    }
+    .p-works__title {
+      color: v.$color-primary;
+    }
+  }
+}
+
+.p-works__thumb {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background-color: v.$color-bg-gray;
+  margin-bottom: 16px;
+}
+
+.p-works__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.p-works__img-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: v.$color-border;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 4px,
+    rgba(v.$color-primary, 0.04) 4px,
+    rgba(v.$color-primary, 0.04) 8px
+  );
+}
+
+.p-works__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(v.$color-primary, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.p-works__overlay-text {
+  font-family: v.$font-display;
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: v.$color-white;
+}
+
+.p-works__meta {
+  padding: 0 4px;
+}
+
+.p-works__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.p-works__tag {
+  font-family: v.$font-en;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: v.$color-accent;
+  padding: 2px 8px;
+  border: 1px solid rgba(v.$color-accent, 0.4);
+}
+
+.p-works__title {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: v.$color-text;
+  margin-bottom: 6px;
+  transition: color 0.2s;
+}
+
+.p-works__excerpt {
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: v.$color-text-light;
+}
+
+// スキルタグ（カード）
+.p-works__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 0;
+  list-style: none;
+  margin-top: 8px;
+}
+
+.p-works__skill {
+  font-family: v.$font-en;
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: v.$color-text-light;
+  padding: 1px 6px;
+  border: 1px solid v.$color-border;
+
+  &--more {
+    color: v.$color-accent;
+    border-color: rgba(v.$color-accent, 0.4);
+  }
+}
+
+// 空状態
+.p-works__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: v.$color-text;
+  padding: 80px 0;
+  font-size: 0.9375rem;
+}
+
+// ページネーション
+.p-works__pagination {
+  display: flex;
+  justify-content: center;
+}

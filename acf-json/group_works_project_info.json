@@ -1,0 +1,151 @@
+{
+  "key": "group_works_project_info",
+  "title": "実績・事例（Works）プロジェクト情報",
+  "fields": [
+    {
+      "key": "field_works_client",
+      "label": "クライアント",
+      "name": "works_client",
+      "type": "text",
+      "instructions": "非公開案件の場合は「非公開」と入力してください",
+      "required": 0,
+      "placeholder": "例：株式会社〇〇 / 非公開",
+      "wrapper": { "width": "50" }
+    },
+    {
+      "key": "field_works_period",
+      "label": "制作期間",
+      "name": "works_period",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "placeholder": "例：2024年10月〜11月（約2ヶ月）",
+      "wrapper": { "width": "50" }
+    },
+    {
+      "key": "field_works_role",
+      "label": "担当範囲",
+      "name": "works_role",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "placeholder": "例：コーディング・WordPress実装"
+    },
+    {
+      "key": "field_works_skills",
+      "label": "使用技術",
+      "name": "works_skills",
+      "type": "checkbox",
+      "instructions": "該当する技術をすべて選択してください",
+      "required": 0,
+      "choices": {
+        "WordPress": "WordPress",
+        "PHP": "PHP",
+        "FLOCSS / SCSS": "FLOCSS / SCSS",
+        "HTML / CSS": "HTML / CSS",
+        "JavaScript": "JavaScript",
+        "jQuery": "jQuery",
+        "Figma": "Figma",
+        "Git / GitHub": "Git / GitHub",
+        "Studio": "Studio",
+        "Illustrator": "Illustrator",
+        "Photoshop": "Photoshop",
+        "MAMP": "MAMP",
+        "サーバー設定・DNS": "サーバー設定・DNS",
+        "LP制作": "LP制作",
+        "その他": "その他"
+      },
+      "layout": "horizontal",
+      "toggle": 1,
+      "return_format": "value"
+    },
+    {
+      "key": "field_works_url",
+      "label": "サイトURL",
+      "name": "works_url",
+      "type": "url",
+      "instructions": "非公開案件は空欄のままでOK",
+      "required": 0,
+      "placeholder": "https://"
+    },
+    {
+      "key": "field_works_github",
+      "label": "GitHubリポジトリ",
+      "name": "works_github",
+      "type": "url",
+      "instructions": "公開可能な案件・自作サイトのみ",
+      "required": 0,
+      "placeholder": "https://github.com/"
+    },
+    {
+      "key": "field_works_is_private",
+      "label": "非公開案件",
+      "name": "works_is_private",
+      "type": "true_false",
+      "instructions": "ONにするとサイトURLを非表示にします",
+      "required": 0,
+      "message": "この案件は非公開（URLを表示しない）",
+      "default_value": 0,
+      "ui": 1
+    },
+    {
+      "key": "field_works_challenge",
+      "label": "課題・背景",
+      "name": "works_challenge",
+      "type": "textarea",
+      "instructions": "この案件でどんな課題・要望があったか",
+      "required": 0,
+      "placeholder": "例：既存サイトのデザインが古く、スマホ対応が不十分だった",
+      "rows": 4
+    },
+    {
+      "key": "field_works_devlog",
+      "label": "設計・実装のポイント",
+      "name": "works_devlog",
+      "type": "textarea",
+      "instructions": "なぜこの実装にしたか、工夫した点を記録",
+      "required": 0,
+      "placeholder": "例：FLOCSSでCSS設計し、再利用性を高めた。アニメーションはCSSのみで実装しJSへの依存を減らした。",
+      "rows": 6
+    },
+    {
+      "key": "field_works_reflection",
+      "label": "振り返り・学び",
+      "name": "works_reflection",
+      "type": "textarea",
+      "instructions": "次の案件に活かせること。「次やるなら〜したい」まで書くと成長意欲が伝わる",
+      "required": 0,
+      "placeholder": "例：スケジュール管理の重要性を再認識。早めに仕様確認をすることで手戻りを減らせた。次やるなら初回MTGでワイヤーフレームまで確認したい。",
+      "rows": 4
+    },
+    {
+      "key": "field_works_result",
+      "label": "成果・数値（任意）",
+      "name": "works_result",
+      "type": "textarea",
+      "instructions": "定量的な成果があれば記載。書けない案件は空欄でOK",
+      "required": 0,
+      "placeholder": "例：Lighthouseスコア 72→94に改善 / 問い合わせ数が前月比150%に増加",
+      "rows": 3
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "works"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": false,
+  "_valid": 1
+}
