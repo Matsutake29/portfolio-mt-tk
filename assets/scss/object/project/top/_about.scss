@@ -43,9 +43,28 @@
   width: 100%;
   max-width: 360px;
   aspect-ratio: 1 / 1;
+  margin: 0 0 16px 12px; // コパー線の左はみ出し分を確保
+
+  // ネイビーの塗り（右下オフセット）
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 100%;
+    height: 100%;
+    background-color: v.$color-primary;
+    z-index: 0;
+  }
 
   @include m.mq-sm {
     max-width: 260px;
+    margin: 0 0 12px 8px;
+
+    &::before {
+      top: 12px;
+      left: 12px;
+    }
   }
 }
 
@@ -142,7 +161,7 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: v.$color-text-light;
+  color: v.$color-text;
   flex-shrink: 0;
   width: 80px;
   padding-top: 2px;

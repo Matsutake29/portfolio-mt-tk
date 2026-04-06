@@ -28,8 +28,7 @@
       </nav>
 
       <p class="l-footer__copyright">
-        <!-- TODO: 著作権表記を変更 -->
-        &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> All Rights Reserved.
+        &copy; <?php echo date('Y'); ?> MATSUO DW All Rights Reserved.
       </p>
 
     </div>

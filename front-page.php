@@ -200,10 +200,10 @@
         <div class="p-top-skills__category">
           <h3 class="p-top-skills__category-title">Markup &amp; Style</h3>
           <ul class="p-top-skills__list">
-            <li class="p-top-skills__tag p-top-skills__tag--primary">HTML5</li>
-            <li class="p-top-skills__tag p-top-skills__tag--primary">CSS3</li>
+            <li class="p-top-skills__tag p-top-skills__tag--primary">HTML</li>
+            <li class="p-top-skills__tag p-top-skills__tag--primary">CSS</li>
             <li class="p-top-skills__tag p-top-skills__tag--primary">SCSS / Sass</li>
-            <li class="p-top-skills__tag p-top-skills__tag--primary">FLOCSS</li>
+            <li class="p-top-skills__tag">FLOCSS</li>
             <li class="p-top-skills__tag">BEM</li>
           </ul>
         </div>
@@ -214,7 +214,6 @@
             <li class="p-top-skills__tag p-top-skills__tag--primary">PHP</li>
             <li class="p-top-skills__tag p-top-skills__tag--primary">JavaScript</li>
             <li class="p-top-skills__tag">jQuery</li>
-            <li class="p-top-skills__tag">TypeScript</li>
           </ul>
         </div>
 
@@ -222,8 +221,7 @@
           <h3 class="p-top-skills__category-title">CMS &amp; Framework</h3>
           <ul class="p-top-skills__list">
             <li class="p-top-skills__tag p-top-skills__tag--primary">WordPress</li>
-            <li class="p-top-skills__tag">Webflow</li>
-            <li class="p-top-skills__tag">Shopify</li>
+            <li class="p-top-skills__tag">Studio</li>
           </ul>
         </div>
 
@@ -241,18 +239,21 @@
           <h3 class="p-top-skills__category-title">Tools &amp; Workflow</h3>
           <ul class="p-top-skills__list">
             <li class="p-top-skills__tag p-top-skills__tag--primary">Git / GitHub</li>
-            <li class="p-top-skills__tag p-top-skills__tag--primary">VS Code</li>
+            <li class="p-top-skills__tag">MAMP</li>
             <li class="p-top-skills__tag">Notion</li>
             <li class="p-top-skills__tag">Slack</li>
+            <li class="p-top-skills__tag">Discord</li>
           </ul>
         </div>
 
         <div class="p-top-skills__category">
           <h3 class="p-top-skills__category-title">Other</h3>
           <ul class="p-top-skills__list">
-            <li class="p-top-skills__tag">SEO基礎</li>
+            <li class="p-top-skills__tag">SEO</li>
             <li class="p-top-skills__tag">GA4</li>
-            <li class="p-top-skills__tag">Web制作ディレクション</li>
+            <li class="p-top-skills__tag">サーバー設定・DNS</li>
+            <li class="p-top-skills__tag">工程・進行管理</li>
+            <li class="p-top-skills__tag">AI活用</li>
           </ul>
         </div>
 
@@ -291,18 +292,14 @@
           <p class="p-top-about__name-ja">松尾 赳治</p>
 
           <div class="p-top-about__text">
-            <p>フリーランスのWebコーダー・WordPressデベロッパーとして活動しています。HTML / CSS / SCSSを中心に、WordPressを使ったサイト制作を得意としています。</p>
-            <p>「デザインの意図をコードで正確に再現する」ことをモットーに、保守性と再現性を意識した実装を心がけています。</p>
+            <p>フリーランスのWebコーダーとして活動しています。WordPressを使ったサイト制作・テーマ開発を得意としています。</p>
+            <p>FLOCSSによるCSS設計と、デザインカンプへの忠実な再現を強みとしています。「自分だけが読めるコード」ではなく、チームで触れる保守性の高い実装を意識し、デザイナー・制作会社様と継続的な協業体制を築いてきました。</p>
           </div>
 
           <dl class="p-top-about__info">
             <div class="p-top-about__info-row">
               <dt class="p-top-about__info-label">拠点</dt>
               <dd class="p-top-about__info-value">愛知県</dd>
-            </div>
-            <div class="p-top-about__info-row">
-              <dt class="p-top-about__info-label">得意分野</dt>
-              <dd class="p-top-about__info-value">WordPress / FLOCSS / レスポンシブ実装</dd>
             </div>
             <div class="p-top-about__info-row">
               <dt class="p-top-about__info-label">対応業務</dt>
