@@ -185,82 +185,6 @@
   </section>
 
   <!-- ============================================================ -->
-  <!-- Skills（使用技術）                                            -->
-  <!-- ============================================================ -->
-  <section class="p-top-skills">
-    <div class="p-top-skills__inner l-container">
-
-      <div class="p-top-skills__header">
-        <span class="p-top-skills__label">Skills</span>
-        <h2 class="p-top-skills__heading">スキル・使用技術</h2>
-      </div>
-
-      <div class="p-top-skills__grid">
-
-        <div class="p-top-skills__category">
-          <h3 class="p-top-skills__category-title">Markup &amp; Style</h3>
-          <ul class="p-top-skills__list">
-            <li class="p-top-skills__tag p-top-skills__tag--primary">HTML</li>
-            <li class="p-top-skills__tag p-top-skills__tag--primary">CSS</li>
-            <li class="p-top-skills__tag p-top-skills__tag--primary">SCSS / Sass</li>
-            <li class="p-top-skills__tag">FLOCSS</li>
-            <li class="p-top-skills__tag">BEM</li>
-          </ul>
-        </div>
-
-        <div class="p-top-skills__category">
-          <h3 class="p-top-skills__category-title">Programming</h3>
-          <ul class="p-top-skills__list">
-            <li class="p-top-skills__tag p-top-skills__tag--primary">PHP</li>
-            <li class="p-top-skills__tag p-top-skills__tag--primary">JavaScript</li>
-            <li class="p-top-skills__tag">jQuery</li>
-          </ul>
-        </div>
-
-        <div class="p-top-skills__category">
-          <h3 class="p-top-skills__category-title">CMS &amp; Framework</h3>
-          <ul class="p-top-skills__list">
-            <li class="p-top-skills__tag p-top-skills__tag--primary">WordPress</li>
-            <li class="p-top-skills__tag">Studio</li>
-          </ul>
-        </div>
-
-        <div class="p-top-skills__category">
-          <h3 class="p-top-skills__category-title">Design &amp; Prototype</h3>
-          <ul class="p-top-skills__list">
-            <li class="p-top-skills__tag p-top-skills__tag--primary">Figma</li>
-            <li class="p-top-skills__tag">Adobe XD</li>
-            <li class="p-top-skills__tag">Illustrator</li>
-            <li class="p-top-skills__tag">Photoshop</li>
-          </ul>
-        </div>
-
-        <div class="p-top-skills__category">
-          <h3 class="p-top-skills__category-title">Tools &amp; Workflow</h3>
-          <ul class="p-top-skills__list">
-            <li class="p-top-skills__tag p-top-skills__tag--primary">Git / GitHub</li>
-            <li class="p-top-skills__tag">MAMP</li>
-            <li class="p-top-skills__tag">Notion</li>
-            <li class="p-top-skills__tag">Slack</li>
-            <li class="p-top-skills__tag">Discord</li>
-          </ul>
-        </div>
-
-        <div class="p-top-skills__category">
-          <h3 class="p-top-skills__category-title">Other</h3>
-          <ul class="p-top-skills__list">
-            <li class="p-top-skills__tag">SEO</li>
-            <li class="p-top-skills__tag">GA4</li>
-            <li class="p-top-skills__tag">サーバー設定</li>
-            <li class="p-top-skills__tag">工程・進行管理</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================ -->
   <!-- About                                                        -->
   <!-- ============================================================ -->
   <section class="p-top-about">
@@ -290,21 +214,7 @@
           <p class="p-top-about__name-en">Takeharu Matsuo</p>
           <p class="p-top-about__name-ja">松尾 赳治</p>
 
-          <div class="p-top-about__text">
-            <p>フリーランスのWebコーダーとして活動しています。WordPressを使ったサイト制作・テーマ開発を得意としています。</p>
-            <p>FLOCSSによるCSS設計と、デザインカンプへの忠実な再現を強みとしています。「自分だけが読めるコード」ではなく、チームで触れる保守性の高い実装を意識し、デザイナー・制作会社様と継続的な協業体制を築いてきました。</p>
-          </div>
-
-          <dl class="p-top-about__info">
-            <div class="p-top-about__info-row">
-              <dt class="p-top-about__info-label">拠点</dt>
-              <dd class="p-top-about__info-value">愛知県</dd>
-            </div>
-            <div class="p-top-about__info-row">
-              <dt class="p-top-about__info-label">対応業務</dt>
-              <dd class="p-top-about__info-value">コーディング / テーマ開発 / 保守運用</dd>
-            </div>
-          </dl>
+          <p class="p-top-about__text">フリーランスのWebコーダーとして活動しています。FLOCSSによるCSS設計・WordPressテーマ開発を得意とし、保守性の高い実装でデザイナー・制作会社様との協業を続けています。</p>
 
           <a href="<?php echo esc_url(home_url('profile/')); ?>" class="c-btn c-btn--secondary">プロフィール詳細</a>
         </div>

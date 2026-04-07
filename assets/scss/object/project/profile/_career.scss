@@ -1,0 +1,127 @@
+@use "../../../foundation/variables" as v;
+@use "../../../foundation/mixins" as m;
+
+// ============================================================
+// Project: Profile - Career（実績・経歴）
+// ============================================================
+
+.p-profile-career {
+  padding: 120px 0;
+  background-color: v.$color-bg-gray;
+
+  @include m.mq-sm {
+    padding: 80px 0;
+  }
+}
+
+.p-profile-career__header {
+  margin-bottom: 64px;
+
+  @include m.mq-sm {
+    margin-bottom: 48px;
+  }
+}
+
+.p-profile-career__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: v.$font-en;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: v.$color-accent;
+  margin-bottom: 12px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 1px;
+    background-color: v.$color-accent;
+    flex-shrink: 0;
+  }
+}
+
+.p-profile-career__heading {
+  font-family: v.$font-display;
+  font-style: italic;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: v.$color-primary;
+  line-height: 1.2;
+}
+
+// 実績数値カウンター
+.p-profile-career__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background-color: v.$color-border;
+  margin-bottom: 80px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include m.mq-sm {
+    grid-template-columns: 1fr;
+    margin-bottom: 60px;
+  }
+}
+
+.p-profile-career__stat {
+  background-color: v.$color-bg;
+  padding: 40px 32px;
+  text-align: center;
+
+  @include m.mq-sm {
+    padding: 32px 24px;
+  }
+}
+
+.p-profile-career__stat-number {
+  font-family: v.$font-en;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: v.$color-primary;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-bottom: 8px;
+
+  span {
+    font-size: 0.45em;
+    font-weight: 500;
+    color: v.$color-accent;
+    letter-spacing: 0.1em;
+  }
+}
+
+.p-profile-career__stat-label {
+  font-size: 0.8125rem;
+  color: v.$color-text-light;
+  letter-spacing: 0.06em;
+}
+
+// 経歴リスト
+.p-profile-career__history {
+  max-width: 720px;
+}
+
+.p-profile-career__history-heading {
+  font-family: v.$font-en;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: v.$color-accent;
+  margin-bottom: 32px;
+}
+
+.p-profile-career__history-text {
+  font-size: 0.9375rem;
+  line-height: 2;
+  color: v.$color-text;
+  max-width: 640px;
+}

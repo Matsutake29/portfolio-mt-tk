@@ -1,0 +1,107 @@
+@use "../../../foundation/variables" as v;
+@use "../../../foundation/mixins" as m;
+
+// ============================================================
+// Project: Profile - Philosophy（制作への想い）
+// ============================================================
+
+.p-profile-philosophy {
+  padding: 120px 0;
+  background-color: v.$color-bg-gray;
+
+  @include m.mq-sm {
+    padding: 80px 0;
+  }
+}
+
+.p-profile-philosophy__header {
+  text-align: center;
+  margin-bottom: 72px;
+
+  @include m.mq-sm {
+    margin-bottom: 48px;
+  }
+}
+
+.p-profile-philosophy__label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: v.$font-en;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: v.$color-accent;
+  margin-bottom: 12px;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 1px;
+    background-color: v.$color-accent;
+    flex-shrink: 0;
+  }
+}
+
+.p-profile-philosophy__heading {
+  font-family: v.$font-display;
+  font-style: italic;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: v.$color-primary;
+  line-height: 1.2;
+}
+
+.p-profile-philosophy__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 960px;
+  margin: 0 auto;
+
+  @include m.mq-lg {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 680px;
+  }
+}
+
+.p-profile-philosophy__item {
+  background-color: v.$color-bg;
+  padding: 40px 32px;
+
+  @include m.mq-sm {
+    padding: 32px 24px;
+  }
+}
+
+.p-profile-philosophy__number {
+  font-family: v.$font-en;
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(v.$color-primary, 0.12);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.p-profile-philosophy__item-heading {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: v.$color-primary;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid v.$color-border;
+}
+
+.p-profile-philosophy__item-text {
+  font-size: 0.9375rem;
+  line-height: 1.9;
+  color: v.$color-text;
+}
