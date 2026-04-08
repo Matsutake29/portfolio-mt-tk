@@ -13,9 +13,6 @@
             <a href="<?php echo esc_url(home_url('works/')); ?>" class="l-footer__nav-link">Works</a>
           </li>
           <li class="l-footer__nav-item">
-            <a href="<?php echo esc_url(home_url('skills/')); ?>" class="l-footer__nav-link">Skills</a>
-          </li>
-          <li class="l-footer__nav-item">
             <a href="<?php echo esc_url(home_url('profile/')); ?>" class="l-footer__nav-link">Profile</a>
           </li>
           <li class="l-footer__nav-item">

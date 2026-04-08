@@ -35,9 +35,6 @@
             <a href="<?php echo esc_url(home_url('works/')); ?>" class="l-header__nav-link<?php echo is_post_type_archive('works') || is_singular('works') ? ' is-active' : ''; ?>">Works</a>
           </li>
           <li class="l-header__nav-item">
-            <a href="<?php echo esc_url(home_url('skills/')); ?>" class="l-header__nav-link<?php echo is_page('skills') ? ' is-active' : ''; ?>">Skills</a>
-          </li>
-          <li class="l-header__nav-item">
             <a href="<?php echo esc_url(home_url('profile/')); ?>" class="l-header__nav-link<?php echo is_page('profile') ? ' is-active' : ''; ?>">Profile</a>
           </li>
         </ul>
@@ -67,9 +64,6 @@
         </li>
         <li class="l-sp-nav__item">
           <a href="<?php echo esc_url(home_url('works/')); ?>" class="l-sp-nav__link<?php echo is_post_type_archive('works') || is_singular('works') ? ' is-active' : ''; ?>">Works</a>
-        </li>
-        <li class="l-sp-nav__item">
-          <a href="<?php echo esc_url(home_url('skills/')); ?>" class="l-sp-nav__link<?php echo is_page('skills') ? ' is-active' : ''; ?>">Skills</a>
         </li>
         <li class="l-sp-nav__item">
           <a href="<?php echo esc_url(home_url('profile/')); ?>" class="l-sp-nav__link<?php echo is_page('profile') ? ' is-active' : ''; ?>">Profile</a>
