@@ -6,6 +6,7 @@
   <!-- FV（ファーストビュー）                                        -->
   <!-- ============================================================ -->
   <section class="p-top-fv">
+    <span class="p-top-fv__bg-text" aria-hidden="true">CODE &amp; CRAFT</span>
     <div class="p-top-fv__inner l-container">
 
       <div class="p-top-fv__body">

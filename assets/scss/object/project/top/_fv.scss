@@ -10,34 +10,47 @@
   display: flex;
   align-items: center;
   background-color: v.$color-bg;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.2' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.48  0 0 0 0 0.42  0 0 0 0 0.31  0 0 0 0.4 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-repeat: repeat;
+  background-size: 400px 400px;
   position: relative;
   overflow: hidden;
+  --bg-text-size: clamp(2rem, min(11vw, 14vh), 11rem);
 
   @include m.mq-lg {
     min-height: calc(100svh - v.$header-height-sp);
   }
+}
 
-  // 左端のアクセントライン
-  &::before {
-    content: "";
-    position: absolute;
-    top: 20%;
-    left: 0;
-    width: 3px;
-    height: 60%;
-    background: linear-gradient(to bottom, transparent, v.$color-accent, transparent);
-    pointer-events: none;
-  }
+// 背景装飾：巨大な英字（右下アンカー）
+.p-top-fv__bg-text {
+  position: absolute;
+  right: clamp(1rem, 2vw, 3rem);
+  bottom: 1.25rem;
+  font-family: v.$font-display;
+  font-style: italic;
+  font-weight: 700;
+  // .p-top-fvの--bg-text-sizeを参照。同じ変数をinnerのpadding-bottomでも使い、衝突を強制回避
+  font-size: var(--bg-text-size);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: v.$color-primary;
+  opacity: 0.07;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
 }
 
 .p-top-fv__inner {
+  position: relative;
+  z-index: 1;
   width: 100%;
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: calc(var(--bg-text-size) + 2.5rem);
 
   @include m.mq-lg {
     padding-top: 48px;
-    padding-bottom: 48px;
   }
 }
 
@@ -46,7 +59,7 @@
   display: grid;
   grid-template-columns: 1fr 500px;
   gap: 60px;
-  align-items: center;
+  align-items: end;
 
   @include m.mq-lg {
     grid-template-columns: 1fr;
