@@ -1,0 +1,55 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixins" as *;
+
+.p-privacy {
+  padding: 80px 0 120px;
+
+  @include mq-sm {
+    padding: 48px 0 80px;
+  }
+
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: $color-text;
+    font-size: 16px;
+    line-height: 1.9;
+
+    h2 {
+      margin-top: 48px;
+      margin-bottom: 16px;
+      font-size: 22px;
+      font-weight: 700;
+      color: $color-primary;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    h3 {
+      margin-top: 32px;
+      margin-bottom: 12px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    ul,
+    ol {
+      margin: 0 0 16px 1.5em;
+
+      li {
+        margin-bottom: 8px;
+      }
+    }
+
+    a {
+      color: $color-accent;
+      text-decoration: underline;
+    }
+  }
+}

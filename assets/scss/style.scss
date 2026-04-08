@@ -34,7 +34,8 @@
 @use "object/project/works" as *;
 @use "object/project/profile" as *;
 // @use "object/project/skills" as *;
-// @use "object/project/contact" as *;
+@use "object/project/contact" as *;
+@use "object/project/privacy" as *;
 
 // ------------------------------------------------------------
 // Object / Utility
