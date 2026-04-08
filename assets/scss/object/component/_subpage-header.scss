@@ -5,12 +5,12 @@
 // Project: Page Header（ページタイトルエリア）
 // ============================================================
 
-.p-page-header {
+.c-subpage-header {
   padding: 48px 0 32px;
   // TODO: 背景画像やデザインは案件に合わせて変更
 }
 
-.p-page-header__title {
+.c-subpage-header__title {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 700;
   letter-spacing: 0.05em;

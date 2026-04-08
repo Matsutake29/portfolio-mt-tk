@@ -10,10 +10,10 @@ get_header();
   <!-- ============================================================ -->
   <!-- ページヘッダー                                               -->
   <!-- ============================================================ -->
-  <div class="p-page-header">
+  <div class="c-subpage-header">
     <div class="l-container">
-      <span class="p-page-header__label">Profile</span>
-      <h1 class="p-page-header__title">プロフィール</h1>
+      <span class="c-subpage-header__label">Profile</span>
+      <h1 class="c-subpage-header__title">プロフィール</h1>
     </div>
   </div>
 

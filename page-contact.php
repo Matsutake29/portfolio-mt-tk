@@ -10,10 +10,10 @@ get_header();
   <!-- ============================================================ -->
   <!-- ページヘッダー                                               -->
   <!-- ============================================================ -->
-  <div class="p-page-header">
+  <div class="c-subpage-header">
     <div class="l-container">
-      <span class="p-page-header__label">Contact</span>
-      <h1 class="p-page-header__title">お問い合わせ</h1>
+      <span class="c-subpage-header__label">Contact</span>
+      <h1 class="c-subpage-header__title">お問い合わせ</h1>
     </div>
   </div>
 
@@ -24,7 +24,7 @@ get_header();
     <div class="p-contact__inner l-container">
 
       <p class="p-contact__lead">
-        お仕事のご依頼・採用に関するお問い合わせは以下のフォームからお気軽にご連絡ください。<br>
+        Web制作のご依頼・ご相談はこちらから。<br class="u-pc-only">お気軽にご連絡ください。<br>
         通常2〜3営業日以内にご返信いたします。
       </p>
 
