@@ -83,24 +83,19 @@
     }
   }
 
-  .wpcf7-acceptance {
-    .wpcf7-list-item {
-      margin: 0;
-    }
-
-    label {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: $color-text;
-      font-size: 14px;
-      font-weight: 400;
-      cursor: pointer;
-    }
+  .c-form-note {
+    margin-top: 32px;
+    color: $color-text;
+    font-size: 14px;
 
     a {
       color: $color-accent;
-      text-decoration: underline;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
