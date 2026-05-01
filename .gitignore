@@ -2,8 +2,11 @@
 .DS_Store
 Thumbs.db
 
-# コンパイル済みCSS（SCSSから生成するため除外）
-assets/css/
+# コンパイル済みCSS
+# ConoHa WING（共有レンタルサーバー）ではビルド環境がないため
+# style.min.css は git 管理対象に含めて本番に配布する。
+# Source map（.map）のみ除外。
+assets/css/*.map
 
 # node
 node_modules/
