@@ -238,6 +238,14 @@ get_header();
         <p class="p-profile-career__history-text">2024年にフリーランスとして独立。制作会社・デザイナーとの業務委託を中心に、コーポレートサイト・LP・WordPressテーマ開発など多様な案件に携わっています。現在も新しいご依頼・パートナーシップを積極的に受け付けています。</p>
       </div>
 
+      <!-- More about me（Blog誘導） -->
+      <div class="p-profile-career__more">
+        <p class="p-profile-career__more-text">これまでのキャリア（自衛官・トラックドライバー）や、日々の活動・学びについては Blog でも発信しています。</p>
+        <a href="https://mt-tk.com/life_builder/" class="p-profile-career__more-link" target="_blank" rel="noopener noreferrer">
+          Blog を読む →
+        </a>
+      </div>
+
     </div>
   </section>
 

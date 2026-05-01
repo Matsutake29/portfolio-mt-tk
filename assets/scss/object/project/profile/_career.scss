@@ -125,3 +125,40 @@
   color: v.$color-text;
   max-width: 640px;
 }
+
+// More about me（Blog 誘導）
+.p-profile-career__more {
+  max-width: 720px;
+  margin-top: 48px;
+  padding: 28px 32px;
+  background: v.$color-bg-gray;
+  border-left: 3px solid v.$color-accent;
+  border-radius: 4px;
+
+  @include m.mq-sm {
+    margin-top: 36px;
+    padding: 24px 20px;
+  }
+}
+
+.p-profile-career__more-text {
+  font-size: 0.9375rem;
+  line-height: 1.9;
+  color: v.$color-text;
+  margin-bottom: 16px;
+}
+
+.p-profile-career__more-link {
+  display: inline-block;
+  font-family: v.$font-en;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: v.$color-accent;
+  transition: opacity 0.2s, transform 0.2s;
+
+  @include m.hover {
+    opacity: 0.8;
+    transform: translateX(4px);
+  }
+}
